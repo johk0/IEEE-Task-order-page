@@ -1,0 +1,40 @@
+.main-title {
+	position: relative;
+	font-weight: 300 !important;
+	word-spacing: 1rem;
+	&::before {
+		content: "";
+		width: 3rem;
+		height: 2px;
+		background-color: #edc84b;
+		position: absolute;
+		top: 50%;
+		left: -50px;
+
+		transform: translate(-50%, -50%);
+	}
+	&::after {
+		content: "";
+		width: 3rem;
+		height: 2px;
+		background-color: #edc84b;
+		position: absolute;
+		top: 50%;
+		right: calc(-3rem + -50px);
+
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media (max-width: 480px) {
+	.main-title {
+		&::before {
+			left: -20px;
+			width: 1rem;
+		}
+		&::after {
+			width: 1rem;
+			right: calc(-1rem + -20px);
+		}
+	}
+}
